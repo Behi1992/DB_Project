@@ -1,4 +1,4 @@
-﻿-- الف
+-- Part A)
 -- 1)
 select  SUM(s.UnitPrice*s.Quantity) as [Sum of Sales], CONVERT(int,SUM(s.UnitPrice*ISNULL(p.ProfitRatio,0.1000)*s.Quantity)+SUM(s.UnitPrice*s.Quantity)) as [Sum of Sales with Profit]
 from Sale_tb as s
@@ -55,7 +55,7 @@ group by [Date]
 
 
 
--- ب
+-- Part B)
 SELECT e.id, e.firstname, e.managerid, m.firstname
 FROM Employee_tb e
 LEFT JOIN Employee_tb m ON e.managerid = m.id
